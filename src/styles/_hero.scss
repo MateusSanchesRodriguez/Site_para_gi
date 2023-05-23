@@ -1,0 +1,43 @@
+.hero{
+    padding-top: 54px;
+    padding-bottom: 100px;
+    height: 900px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .container{
+        position: relative;
+        max-width: 1700px;
+    }
+
+    &--text{
+        margin-top: 64px;
+        margin-bottom: 64px;
+        font-size: 100px;
+        line-height: 56px;
+        font-weight: 800;
+        text-align: center;
+        line-height: 1;
+    }
+
+    &--logo{
+        margin: 0 auto;
+        height: 80px;
+        display: block;
+        border-radius: 8px;
+    }
+
+    @media(max-width:640px){
+        padding:  40px 0;
+        &--logo{
+            height: 40px;
+        }
+
+        &--text{
+            font-size: 22px;
+            line-height: 24px;
+            margin: 24px 0;
+        }
+    }
+}

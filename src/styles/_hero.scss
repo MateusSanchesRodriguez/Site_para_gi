@@ -30,13 +30,14 @@
 
     @media(max-width:640px){
         padding:  40px 0;
+        height: 667px;
+
         &--logo{
             height: 40px;
         }
 
         &--text{
-            font-size: 22px;
-            line-height: 24px;
+            font-size: 40px;
             margin: 24px 0;
         }
     }

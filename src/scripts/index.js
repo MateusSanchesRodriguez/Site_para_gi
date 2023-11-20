@@ -32,10 +32,13 @@ const contadorDoEvento = setInterval(() => {
         document.querySelector("body").style.position = "relative";
         document.getElementById("hidden").style.removeProperty("display");
     }
+    console.log("Passou pelo If");
+    console.log("Hora Evento:"timeStampDoEvento)
+    console.log("Distancia evento:"+distanciaHoraEvento)
 
-    if (distanciaHoraEvento < 0) {
-        clearInterval(contadorDoEvento);
-        document.getElementById("contador").remove();
-        document.getElementById("expirado").innerHTML = "acabou 😔";
-    }
+    // if (distanciaHoraEvento < 0) {
+    //     clearInterval(contadorDoEvento);
+    //     document.getElementById("contador").remove();
+    //     document.getElementById("expirado").innerHTML = "acabou 😔";
+    // }
 }, 1000);

@@ -23,22 +23,18 @@ const contadorDoEvento = setInterval(() => {
         (distanciaHoraEvento % minutosEmMs) / 1000
     );
 
-    document.getElementById(
-        "contador"
-    ).innerHTML = `${diasAteOEvento}d ${horasAteOEvento}h ${minAteOEvento}m ${secAteOEvento}s`;
 
-    if (distanciaHoraEvento >= timeStampDoEvento) {
-        console.log("Deu certo");
+
+    if (timeStampAtual >= timeStampDoEvento) {
+        document.getElementById(
+            "contador"
+        ).innerHTML = "28 de Maio de 2023";
+        clearInterval(contadorDoEvento);
         document.querySelector("body").style.position = "relative";
         document.getElementById("hidden").style.removeProperty("display");
+    } else {
+        document.getElementById(
+            "contador"
+        ).innerHTML = `${diasAteOEvento}d ${horasAteOEvento}h ${minAteOEvento}m ${secAteOEvento}s`;
     }
-    console.log("Passou pelo If");
-    console.log("Hora Evento:"timeStampDoEvento)
-    console.log("Distancia evento:"+distanciaHoraEvento)
-
-    // if (distanciaHoraEvento < 0) {
-    //     clearInterval(contadorDoEvento);
-    //     document.getElementById("contador").remove();
-    //     document.getElementById("expirado").innerHTML = "acabou 😔";
-    // }
 }, 1000);
